@@ -14,7 +14,7 @@ script:
 deploy:
   provider: script
   script:
-    - sh verification.sh
-    - sh docker_push.sh
+    - sh -c ./verification.sh
+    - sh -c ./docker_push.sh
   on:
     branch: master
