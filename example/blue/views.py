@@ -11,10 +11,10 @@ def code(request):
     return JsonResponse({'secret_code' : secret_code})
 
 def test(request):
-    comments = [
-        {'status' : 'healthy',
-        'container' : 'https://hub.docker.com/repository/docker/enochnooli/my_django_app_web',
-        'project' : 'https://github.com/lexstar1/Challenge_Project'}
-
-    ]
+    comments = [{
+        'status': 'healthy',
+        'container':
+        'https://hub.docker.com/repository/docker/enochnooli/challenge_project_web',
+        'project': 'https://github.com/lexstar1/Challenge_Project'
+    }]
     return JsonResponse({'data' : comments})
