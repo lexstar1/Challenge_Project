@@ -1,15 +1,15 @@
-
 from django.http import JsonResponse
 
 # Create your views here.
 
 def code(request):
 
-    secret_code=[
-        {'secret_code' : 'JHgT2xjDi9Xut8dZx8jdFYWi=ahkL*'}
+    secret_code =[
+        {'code_name': 'thedoctor',
+        'secret_code': 'JHgT2xjDi9Xut8dZx8jdFYWi=ahkL*'}
     ]
     return JsonResponse({'secret_code' : secret_code})
-	
+
 def test(request):
     comments = [
         {'status' : 'healthy',
@@ -18,5 +18,3 @@ def test(request):
 
     ]
     return JsonResponse({'data' : comments})
-
-
