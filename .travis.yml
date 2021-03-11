@@ -10,12 +10,7 @@ before_script: pip install docker-compose
 
 script:
   - docker-compose run web sh -c "python manage.py test"
-  - docker-compose up --build -d 
+  - docker-compose up --build -d
+  - docker images 
   - sh -c ./verification.sh
-  
-deploy:
-  provider: script
-  script:
-    - sh -c ./docker_push.sh
-  on:
-    branch: master
+  - sh ./docker_push.sh
