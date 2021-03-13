@@ -1,0 +1,1 @@
+This is a simple project to Dockerize your python application. Continuous Integration is implemented using TravisCI. Any change made to the master on Github, triggers TravisCI to integrate the code changes and be tested and built using the '.travis.yml' in the root
