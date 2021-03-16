@@ -1,6 +1,6 @@
 This is a simple project to implement 'url routing' in Django and to Dockerize the application. Continuous Integration is implemented using TravisCI. Any change made to the master on Github, triggers TravisCI to integrate the code changes and be tested and built using the '.travis.yml' file present in the root
 
-1)Firstly we extract a string stored in DynamoDB table in AWS via a python script using 'boto3' a AWS SDK for Python (Boto3) to create, configure, and manage AWS services
+1)Firstly we extract a string stored in DynamoDB table in AWS via a python script using 'Boto3', a AWS SDK for Python to create, configure, and manage AWS services
 
 2)Then via 'url routing' using Django framework, we publish the extracted results at specific paths. Eg: localhost:5000/path1,localhost:5000/path2 etc.,
 
