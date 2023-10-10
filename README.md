@@ -1,13 +1,13 @@
-This is a simple project to implement 'url routing' in Django and to Dockerize the application. Continuous Integration is implemented using TravisCI. Any change made to the master on Github, triggers TravisCI to integrate the code changes and be tested and built using the '.travis.yml' file present in the root
+The objective of this project is to incorporate URL routing within Django and Dockerize the resultant application. Furthermore, implement Continuous Integration using TravisCI. Upon making changes to the master branch on Github, TravisCI is automatically triggered to integrate the code changes by testing and building the application using the '.travis.yml' file located in the root directory. 
 
-1)Firstly we extract a string stored in DynamoDB table in AWS via a python script using 'Boto3', a AWS SDK for Python to create, configure, and manage AWS services
+- We use Boto3, an AWS SDK for Python, to extract a string stored in a DynamoDB table in AWS via a Python script. 
 
-2)Then via 'url routing' using Django framework, we publish the extracted results at specific paths. Eg: localhost:5000/path1,localhost:5000/path2 etc.,
+- Then, using the Django framework and URL routing, we publish the extracted results at specific paths, such as localhost:5000/path1 and localhost:5000/path2.
 
-3)We use the 'JsonResponse' class in Django to create a JSON-encoded response
+- To create a JSON-encoded response, we make use of the JsonResponse class in Django. 
 
-4)We use 'curl' and 'jq' to verify the same by invoking the web service and retrieving the JSON objects
+- We verify the results by invoking the web service and retrieving the JSON objects using 'curl' and 'jq.'
 
-5)A Docker image of the application is created via the Dockerfile. 'docker-compose.yml' is used to build the image and start the the service 
+- A Docker image of the application is created using the Dockerfile, and then docker-compose.yml is used to build the image and start the service.
 
-6)Continuous Integration is implemented using TravisCI. Any change made to the master on Github, triggers TravisCI to integrate the code changes and be tested and built using the '.travis.yml' file present in the root
+- Finally, we implement Continuous Integration through TravisCI. Any changes made to the master on Github triggers TravisCI to integrate the code changes and test and build using the .travis.yml file present in the root.
